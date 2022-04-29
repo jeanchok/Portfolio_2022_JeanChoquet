@@ -24,11 +24,13 @@ const Portfolio = () => {
                     <div className='flip-card'>
                         <div className='flip-card-inner'>
                             <div className='flip-card-front OC'>
-                                {/* <h4>OpenClassrooms</h4> */}
                                 <img src="./logo-openclassroom.jpg" alt="logo-openclassroom" />
                             </div>
-                            <div className='flip-card-back'>
-                                <h4>OpenClassrooms back</h4>
+                            <div className='flip-card-back OCback'>
+                                <img src="./icon-above-font.png" alt="logo-groupomania" />
+                                <h4>Réseau social d'entreprise :</h4>
+                                <p>Création de compte, posts, likes, gestion des utilisateurs...</p>
+                                <a href='' target='_blank' rel="noopener noreferrer">Voir le site</a>
                             </div>
                         </div>
                     </div>
@@ -51,7 +53,7 @@ const Portfolio = () => {
                                 <h4>Mes Projets</h4>
                             </div>
                             <div className='flip-card-back'>
-                                <h4>Mes Projets back</h4>
+                                <h4>En cours ...</h4>
                             </div>
                         </div>
                     </div>

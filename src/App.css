@@ -358,6 +358,26 @@ footer {
   margin: 15px;
 }
 
+.OCback img {
+  margin-top: -50px;
+  background-color: white;
+  color: #000;
+}
+
+.OCback h4,
+.OCback p {
+  color: #000 !important;
+}
+
+.OCback {
+  background-color: white !important;
+}
+
+.OCback h4:hover {
+  color: #CCA43B;
+  transition: all 0.35s ease;
+}
+
 .flip-card-front img,
 .flip-card-back img {
   width: 100%;
@@ -487,10 +507,9 @@ footer {
 }
 
 
-/* .flip-card-front,
-.flip-card-back {
+.OCback {
   cursor: pointer;
-} */
+}
 
 
 /* Footer */
@@ -631,6 +650,10 @@ footer {
 }
 
 /*Compétences*/
+.competencesContainer__competences__cards--globe {
+  display: none;
+}
+
 .competencesContainer {
   max-width: 1280px;
   margin: auto;
@@ -789,6 +812,14 @@ a {
     opacity: 1;
   }
 }
+
+/*Sphere Competences*/
+#myCanvas {
+  width: 100vw;
+  height: 100vh;
+}
+
+
 
 /*Contact */
 .contactContainer {
