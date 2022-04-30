@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
+
 const Portfolio = () => {
     const [isLoading2, setIsLoading2] = useState(true);
 

@@ -22,6 +22,7 @@
   font-size: calc(10px + 2vmin);
   color: white;
   z-index: -2;
+  overflow-x: hidden;
 }
 
 .App-link {
@@ -435,7 +436,10 @@ footer {
   justify-content: space-evenly;
   margin-top: 25px;
   perspective: 1000px;
+
 }
+
+
 
 .portfolio h4 {
   font-weight: 600;
@@ -940,4 +944,59 @@ a {
 .textContact {
   margin: auto;
   margin-top: 20px;
+}
+
+
+/* Media Queries */
+
+@media (max-width: 1250px) {
+
+  .portfolio,
+  .accueil {
+    flex-direction: column;
+  }
+
+  .competencesContainer__competences__cards {
+    width: 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  .accueil h1 {
+    flex-wrap: revert;
+  }
+
+  .accueil h1:after {
+    display: none;
+  }
+
+  .profilePictureContainer {
+    width: 350px;
+    height: 350px;
+    min-width: 100px !important;
+    min-height: 100px !important;
+  }
+
+  .portfolioContainer {
+    margin: 0;
+  }
+
+  .portfolioContainer p {
+    max-width: 300px;
+    margin: auto;
+  }
+
+  .flip-card-inner {
+    margin-left: -15px;
+  }
+
+  .flip-card {}
+}
+
+
+@media (max-width: 360px) {
+  .profilePictureContainer {
+    width: 300px;
+    height: 300px;
+  }
 }
