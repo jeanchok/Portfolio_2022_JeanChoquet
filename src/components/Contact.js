@@ -1,38 +1,31 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { useForm } from 'react-hook-form';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+    const [message, setMessage] = useState(false);
+    const [email, setEmail] = useState('');
+    const [name, setName] = useState('');
+    const [subject, setSubject] = useState('');
+    const [messageBody, setMessageBody] = useState('');
 
-    const {
-        register,
-        handleSubmit,
-        reset,
-        formState: { errors }
-    } = useForm();
+    const form = useRef();
 
-    const onSubmit = async (data) => {
+    const sendEmail = (e) => {
+        e.preventDefault();
 
-        const { name, email, subject, message } = data;
-        try {
-            const templateParams = {
-                name,
-                email,
-                subject,
-                message
-            };
-            await emailjs.send(
-                process.env.REACT_APP_SERVICE_ID,
-                process.env.REACT_APP_TEMPLATE_ID,
-                templateParams,
-                process.env.REACT_APP_USER_ID
-            );
-            reset();
-        } catch (e) {
-            console.log(e);
-        }
+        emailjs.sendForm('service_9krjany', 'template_npw1bqt', form.current, 'Kk1GXDbI61romaMWa')
+            .then((result) => {
+                console.log(result.text);
+                setMessage(true);
+                setEmail('');
+                setName('');
+                setSubject('');
+                setMessageBody('');
+            }, (error) => {
+                console.log(error.text);
+            });
     };
 
     return (
@@ -47,39 +40,33 @@ const Contact = () => {
                 <p className='textContact tracking-in-expand-fwd-top'>Pour toutes informations, vous pouvez me contacter avec le formulaire ci-desous.</p>
                 <div className='contactFormContainer'>
 
-                    <form classname='contactForm' id='contact-form' onSubmit={handleSubmit(onSubmit)} noValidate>
+                    <form className='contactForm' id='contact-form' ref={form} onSubmit={sendEmail} noValidate>
                         {/* Row 1 of form */}
                         <div className='formRow'>
                             <div className='col-6'>
                                 <input
                                     type='text'
                                     name='name'
-                                    {...register('name', {
-                                        required: { value: true, message: 'Veuillez entrer votre nom' },
-                                        maxLength: {
-                                            value: 30,
-                                            message: 'Veuillez entrer 30 caractères au maximum'
-                                        }
-                                    })}
                                     className='form-control formInput'
                                     placeholder='Nom'
+                                    value={name}
+                                    onChange={(e) => setName(e.target.value)}
+                                    required
                                 ></input>
-                                {errors.name && <span className='errorMessage'>{errors.name.message}</span>}
+
                             </div>
                             <div className='col-6'>
                                 <input
                                     type='email'
                                     name='email'
-                                    {...register('email', {
-                                        required: true,
-                                        pattern: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
-                                    })}
                                     className='form-control formInput'
                                     placeholder='Addresse email'
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                                    required
                                 ></input>
-                                {errors.email && (
-                                    <span className='errorMessage'>Veuillez entrer une adresse e-mail valide</span>
-                                )}
+
                             </div>
                         </div>
                         {/* Row 2 of form */}
@@ -88,19 +75,14 @@ const Contact = () => {
                                 <input
                                     type='text'
                                     name='subject'
-                                    {...register('subject', {
-                                        required: { value: true, message: 'Veuillez enter un sujet' },
-                                        maxLength: {
-                                            value: 75,
-                                            message: 'Le sujet ne doit pas excéder 75 caractères'
-                                        }
-                                    })}
                                     className='form-control formInput'
                                     placeholder='Subjet'
+                                    value={subject}
+                                    onChange={(e) => setSubject(e.target.value)}
+                                    required
+                                    minLength={3}
                                 ></input>
-                                {errors.subject && (
-                                    <span className='errorMessage'>{errors.subject.message}</span>
-                                )}
+
                             </div>
                         </div>
                         {/* Row 3 of form */}
@@ -109,18 +91,18 @@ const Contact = () => {
                                 <textarea
                                     rows={3}
                                     name='message'
-                                    {...register('message', {
-                                        required: true
-                                    })}
                                     className='form-control formInput'
                                     placeholder='Message'
-                                ></textarea>
-                                {errors.message && <span className='errorMessage'>Veuillez entrer un message</span>}
+                                    value={messageBody}
+                                    onChange={(e) => setMessageBody(e.target.value)}
+                                    required                                ></textarea>
+
                             </div>
                         </div>
                         <button className='submit-btn' type='submit'>
                             Envoyer
                         </button>
+                        {message ? <p className='successMessage'>Votre message a bien été envoyé</p> : null}
                     </form>
                     <div className='contactInfo'>
                         <h3>Informations</h3>

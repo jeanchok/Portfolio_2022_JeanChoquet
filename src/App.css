@@ -866,6 +866,7 @@ a {
   width: 100%;
   min-height: 100px;
   margin-top: 20px;
+  padding-top: 10px;
 }
 
 #contact-form button {
@@ -885,6 +886,12 @@ a {
   box-sizing: border-box;
   -webkit-transition: all 0.35s ease;
   transition: all 0.35s ease;
+}
+
+.successMessage {
+  font-size: 20px;
+  margin-top: 15px;
+  color: #CCA43B;
 }
 
 #contact-form button:hover {
@@ -923,9 +930,10 @@ a {
 
 .contactInfo span {
   color: white;
-  font-size: 22px;
+  font-size: calc(10px + 2vmin);
   margin-top: 20px;
   margin-left: 20px;
+  text-align: left;
 }
 
 .contactFormContainer {
@@ -956,18 +964,105 @@ a {
     flex-direction: column;
   }
 
+  .accueilContainer h3 {
+    margin-right: 10px;
+  }
+
+
   .competencesContainer__competences__cards {
     width: 100%;
+
+
+  }
+
+  .competencesContainer__textHeader {
+    margin: auto;
+    width: 90%;
+  }
+
+  .competencesContainer__competences {
+    margin: auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .contactFormContainer {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  #contact-form {
+    width: 90%
+  }
+
+  .contactInfo {
+    margin-top: 30px;
+    width: 90%;
+
+  }
+
+  .contactInfo h3 {
+    text-align: center;
+  }
+}
+
+.mobileMenu {
+  display: none;
+}
+
+@media (max-width: 840px) {
+  .snip1198 {
+    display: none !important;
+
+  }
+
+  .navigation {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navigation ul {
+    flex-direction: column;
+  }
+
+  .active {
+    display: flex !important;
+  }
+
+  .mobileMenu {
+    display: block;
+    padding: 0;
+    border: none;
+    background: none;
+    color: white;
+    font-size: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    width: 35px;
+    height: 40px;
+    margin-left: 10px;
   }
 }
 
 @media (max-width: 520px) {
   .accueil h1 {
     flex-wrap: revert;
+    margin-right: 15px;
   }
 
   .accueil h1:after {
     display: none;
+  }
+
+  .accueilContainer {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .portfolioContainer {
+    margin-bottom: 20px;
   }
 
   .profilePictureContainer {
@@ -979,6 +1074,7 @@ a {
 
   .portfolioContainer {
     margin: 0;
+    margin-bottom: 20px;
   }
 
   .portfolioContainer p {
@@ -990,7 +1086,32 @@ a {
     margin-left: -15px;
   }
 
-  .flip-card {}
+  .competencesContainer__textHeader {
+    width: 100%;
+  }
+
+  .competencesContainer__textHeader h2 {
+    margin-left: 0;
+  }
+
+  .competencesContainer__textHeader p {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .competencesContainer {
+    width: 100%;
+  }
+
+  .contactContainer {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .contact h2 {
+    margin-left: 0;
+  }
+
 }
 
 

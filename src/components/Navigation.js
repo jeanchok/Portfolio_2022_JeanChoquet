@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink } from "react-router-dom";
 
 const Navigation = () => {
+    const [menuClass, setMenuClass] = useState(false);
+
+    const changeClass = () => {
+        setMenuClass(!menuClass);
+    }
+
     return (
         <div className="navigation">
-            <ul className='snip1198'>
+            <button className="mobileMenu" onClick={changeClass}>
+                {menuClass ? <i className="fas fa-times"></i> : <i className="fa fa-bars" aria-hidden="true"></i>}
+            </button>
+            <ul className={menuClass ? 'snip1198 active' : 'snip1198'} >
                 <NavLink
                     to="/"
                     className={(nav) => (nav.isActive ? "nav-active" : "")}
