@@ -515,6 +515,191 @@ footer {
   cursor: pointer;
 }
 
+.cardContainer {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  /* justify-content: space-between; */
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.card {
+  max-width: 30%;
+  margin: 10px;
+  transition: all 200ms ease-in;
+  transform: scale(1);
+}
+
+.portfolioImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.card:hover {
+  transition: all 200ms ease-in;
+  transform: scale(1.1);
+  -webkit-box-shadow: 0px 0px 15px 0px #2b2b2b;
+  box-shadow: 0px 0px 15px 0px #2b2b2b;
+}
+
+.cardOver {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 3;
+  background-color: #0000006e;
+  opacity: 0;
+  transition: all 200ms ease-in;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.cardOver h4 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.cardOver:hover {
+  opacity: 1;
+  transition: all 200ms ease-in;
+}
+
+.cardOver__button {
+  background-color: transparent;
+  border: transparent;
+
+}
+
+.cardOver__buttonImg {
+  width: 50px;
+  transition: all 150ms ease-in;
+  transform: scale(1);
+  cursor: pointer;
+}
+
+.cardOver__buttonImg:hover {
+  transition: all 150ms ease-in;
+  transform: scale(1.2);
+
+}
+
+.showProject {
+  display: block;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.904);
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.portfolio__TitleContainer {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.portfolio__technoSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.portfolio__technoContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.portfolio__technoSection h4 {
+  margin-bottom: 15px;
+}
+
+.portfolio__TextContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.portfolio__TextContainer h4 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.portfolio__TextContainer p {
+  margin: auto;
+  max-width: 90%;
+  line-height: 150%;
+}
+
+.portfolio__TextContainer a {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-decoration: none;
+  cursor: pointer;
+  color: #CCA43B;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+
+.portfolio__TextContainer a:hover {
+  color: white;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+
+.portfolio__TitleContainer h3 {
+  margin: auto;
+  margin-left: 20px;
+}
+
+.portfolio__ImgTitle {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.portfolio__technoImg {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.portfolio__backButton {
+  background-color: transparent;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+  transform: scale(1);
+  cursor: pointer;
+  display: flex;
+  margin-top: 20px;
+  border: transparent;
+}
+
+.portfolio__backButton:hover {
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+  transform: scale(1.2);
+}
+
+.hideProject {
+  display: none;
+}
+
 
 /* Footer */
 
@@ -986,6 +1171,11 @@ a {
 }
 
 @media (max-width: 900px) {
+
+  main {
+    height: 100vh;
+  }
+
   .contactFormContainer {
     flex-direction: column;
     margin-top: 20px;
@@ -1003,6 +1193,11 @@ a {
 
   .contactInfo h3 {
     text-align: center;
+  }
+
+  .cardContainer {
+    flex-direction: column;
+    align-items: center;
   }
 }
 
