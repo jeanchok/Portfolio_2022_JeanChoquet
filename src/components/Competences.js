@@ -50,11 +50,10 @@ const Competences = () => {
                         </div>
                     </div>
                     <div className='competencesContainer__competences__cards--globe'>
-                        <h4>Mes compétences</h4>
-                        {/* <Sphere /> */}
-                        <div className='competencesContainer__competences__cards--buttonContainer'>
+                        <Sphere isLoading2={isLoading2} />
+                        {/* <div className='competencesContainer__competences__cards--buttonContainer'>
                             <button>Mon CV</button>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

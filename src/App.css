@@ -840,7 +840,7 @@ footer {
 
 /*Compétences*/
 .competencesContainer__competences__cards--globe {
-  display: none;
+  min-width: 40%;
 }
 
 .competencesContainer {
@@ -853,6 +853,7 @@ footer {
 .competencesContainer__textHeader p {
   font-size: 22px !important;
   margin-bottom: 30px;
+  margin-top: 10px;
 }
 
 .competencesContainer__textHeader a {
@@ -1003,11 +1004,22 @@ a {
 }
 
 /*Sphere Competences*/
-#myCanvas {
-  width: 100vw;
-  height: 100vh;
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.tagcloud+div {
+  display: none;
 }
 
+.tagcloud {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  margin: auto;
+  width: 50%;
+}
+
+.tagcloud--item:hover {
+  color: #36454F;
+}
 
 
 /*Contact */
@@ -1167,6 +1179,8 @@ a {
 
   .competencesContainer__competences {
     margin: auto;
+
+
   }
 }
 
@@ -1199,6 +1213,13 @@ a {
     flex-direction: column;
     align-items: center;
   }
+
+  .competencesContainer__competences {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
 }
 
 .mobileMenu {
