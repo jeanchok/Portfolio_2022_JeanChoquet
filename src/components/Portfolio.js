@@ -64,7 +64,7 @@ const Portfolio = () => {
                     </div>
 
 
-                    <div className={projectActive2 ? 'showProject' : 'hideProject'}>
+                    {/* <div className={projectActive2 ? 'showProject' : 'hideProject'}>
                         <div className='portfolio__TitleContainer'>
                             <img className='portfolio__ImgTitle' src="./logotrans.png" alt="d2m logo" />
                             <h3>Site vitrine pour un professionnel</h3>
@@ -85,6 +85,35 @@ const Portfolio = () => {
                                 en modifiant un thème gratuit pour satisfaire les besoins de son entreprise locale.
                             </p>
                             <a href="https://d2m-machine-bois.fr/">Voir le projet</a>
+                        </div>
+                        <button onClick={() => setProjectActive2(!projectActive2)} className='portfolio__backButton'>
+                            <img src="./arrow.png" alt="back" />
+                        </button>
+                    </div> */}
+
+                    <div className={projectActive2 ? 'showProject' : 'hideProject'}>
+                        <div className='portfolio__TitleContainer'>
+                            <img className='portfolio__ImgTitle' src="./camion.png" alt="cap logo" />
+                            <h3>Site vitrine pour un professionnel</h3>
+                        </div>
+                        <div className='portfolio__technoSection'>
+                            <h4>Technologies utilisées</h4>
+                            <div className='portfolio__technoContainer'>
+
+                                <img className='portfolio__technoImg' src="./icons8-css3-48.png" alt="css3" />
+                                <img className='portfolio__technoImg' src="./icons8-html-5-48.png" alt="html5" />
+                                <img className='portfolio__technoImg' src="./wix.png" alt="wix" />
+                                <img className='portfolio__technoImg' src="./js.png" alt="js" />
+
+
+                            </div>
+                        </div>
+                        <div className='portfolio__TextContainer'>
+                            <h4>Étude de cas</h4>
+                            <p>Réalisation d'un site vitrine pour un Camion à Pizzas. Le principal travail réalisé était la refonte totale du design. Le SEO devait
+                                être également pris en compte. Il est effectivement classé n°1 sur le terme "Camion à Pizzas".
+                            </p>
+                            <a href="https://www.lecamionapizzas.com/">Voir le projet</a>
                         </div>
                         <button onClick={() => setProjectActive2(!projectActive2)} className='portfolio__backButton'>
                             <img src="./arrow.png" alt="back" />
@@ -139,7 +168,7 @@ const Portfolio = () => {
                             <h4 className='cardOver__Title'>Projet Professionnel</h4>
                             <button className='cardOver__button' onClick={() => setProjectActive2(!projectActive2)}><img className='cardOver__buttonImg' src=".\external-link (1).png" alt="carré flêche" /></button>
                         </div>
-                        <img className='portfolioImage' src="./mockup website d2m.png" alt="logo-projet-professionnel" />
+                        <img className='portfolioImage' src="./propjetpro.PNG" alt="logo-projet-professionnel" />
                     </div>
                     <div
                         className='card'>
@@ -147,7 +176,7 @@ const Portfolio = () => {
                             <h4 className='cardOver__Title'>Projet Personnel</h4>
                             <button className='cardOver__button' onClick={() => setProjectActive3(!projectActive3)}><img className='cardOver__buttonImg' src=".\external-link (1).png" alt="carré flêche" /></button>
                         </div>
-                        <img className='portfolioImage' src="./mockup website webzh.png" alt="logo webzh agence" />
+                        <img className='portfolioImage' src="./webzh mockup.PNG" alt="logo webzh agence" />
                     </div>
 
                 </div>
