@@ -40,7 +40,7 @@ const Contact = () => {
                 <p className='textContact tracking-in-expand-fwd-top'>Pour toutes informations, vous pouvez me contacter avec le formulaire ci-desous.</p>
                 <div className='contactFormContainer'>
 
-                    <form className='contactForm' id='contact-form' ref={form} onSubmit={sendEmail} noValidate>
+                    <form className='contactForm' id='contact-form' ref={form} onSubmit={sendEmail}>
                         {/* Row 1 of form */}
                         <div className='formRow'>
                             <div className='col-6'>
