@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { NavLink } from "react-router-dom";
 
 const Navigation = () => {
@@ -10,7 +10,7 @@ const Navigation = () => {
 
     return (
         <div className="navigation">
-            <button className="mobileMenu" onClick={changeClass}>
+            <button className="mobileMenu" onClick={changeClass} aria-label="Navigation">
                 {menuClass ? <i className="fas fa-times"></i> : <i className="fa fa-bars" aria-hidden="true"></i>}
             </button>
             <ul className={menuClass ? 'snip1198 active' : 'snip1198'} >
@@ -23,10 +23,10 @@ const Navigation = () => {
                     </li>
                 </NavLink>
                 <NavLink
-                    to="/portfolio"
+                    to="/projets"
                     className={(nav) => (nav.isActive ? "nav-active" : "")}
                 >
-                    <li>Portfolio</li>
+                    <li>Projets</li>
                 </NavLink>
                 <NavLink
                     to="/competences"

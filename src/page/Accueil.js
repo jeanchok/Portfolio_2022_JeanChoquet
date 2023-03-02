@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import Portfolio from '../components/Portfolio';
-import Competences from '../components/Competences';
-import Contact from '../components/Contact';
+import Particules from '../components/Particules';
+
 
 
 
@@ -33,7 +32,7 @@ const Accueil = () => {
             <div className='accueilContainer'>
                 <div className='accueil'>
                     <div className='profilePictureContainer'>
-                        <img className='profilePicture text-focus-in' src='./1651058775675.jpg' alt='Jean Choquet Photo de profile'></img>
+                        <img className='profilePicture text-focus-in' src='./1651058775675.webp' alt='Jean Choquet Photo de profile'></img>
                     </div>
                     <div className='accueil__text'>
                         <h1 className={isLoading ?
@@ -46,6 +45,7 @@ const Accueil = () => {
                 </div>
             </div>
             <Footer />
+            <Particules />
         </div>
     );
 };

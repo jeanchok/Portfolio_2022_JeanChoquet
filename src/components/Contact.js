@@ -2,6 +2,8 @@ import React, { useRef, useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import emailjs from '@emailjs/browser';
+import Particules from '../components/Particules';
+
 
 const Contact = () => {
     const [message, setMessage] = useState(false);
@@ -139,6 +141,7 @@ const Contact = () => {
 
                 </div>
             </div>
+            <Particules />
             <Footer />
 
         </div>

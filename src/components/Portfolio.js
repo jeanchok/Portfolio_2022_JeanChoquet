@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { f08e } from '@fortawesome/fontawesome-free-solid'
+import Particules from '../components/Particules';
 
 
 
@@ -27,7 +26,7 @@ const Portfolio = () => {
                 <Navigation />
             </header>
             <div className='portfolioContainer'>
-                <h2 className={isLoading2 ? 'portfolioTitle tracking-in-contract-bck' : 'portfolioTitle linear-wipe'}>Portfolio</h2>
+                <h2 className={isLoading2 ? 'portfolioTitle tracking-in-contract-bck' : 'portfolioTitle linear-wipe'}>Projets</h2>
                 <p className='tracking-in-expand-fwd-top'>Découvrez mes projets réalisés en tant que développeur web.</p>
 
 
@@ -222,6 +221,7 @@ const Portfolio = () => {
                     </div>
                 </div> */}
             </div >
+            <Particules />
             <Footer />
         </div >
     );

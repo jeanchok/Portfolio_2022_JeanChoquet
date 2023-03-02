@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import Sphere from './Sphere';
+import Particules from '../components/Particules';
+
 
 const Competences = () => {
     const [isLoading2, setIsLoading2] = useState(true);
@@ -50,6 +52,7 @@ const Competences = () => {
                         </div>
                     </div>
                     <div className='competencesContainer__competences__cards--globe'>
+                        <div className='competencesContainer__competences__cards--globeHideAnimation'></div>
                         <Sphere isLoading2={isLoading2} />
                         {/* <div className='competencesContainer__competences__cards--buttonContainer'>
                             <button>Mon CV</button>
@@ -57,6 +60,7 @@ const Competences = () => {
                     </div>
                 </div>
             </div>
+            <Particules />
             <Footer />
         </div>
     );
