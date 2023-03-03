@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import Particules from '../components/Particules';
+import ModalProjects from '../components/ModalProjects';
+import ProjectCardL from '../components/ProjectCardL';
+import ProjectCardS from '../components/ProjectCardS';
 
 
 
@@ -11,6 +14,76 @@ const Portfolio = () => {
     const [projectActive2, setProjectActive2] = useState(false);
     const [projectActive3, setProjectActive3] = useState(false);
 
+    const [modalActive, setModalActive] = useState(false);
+    const [propsModal, setPropsModal] = useState();
+
+
+    const projectsApp = [
+        {
+            putFirst: true,
+            name: `Réseau social d'entreprise`,
+            logoSrc: './logo-openclassroom.jpg',
+            github: 'https://github.com/jeanchok/Projet_7_Groupomania_Choquet_Jean',
+            link: '',
+            text: `Projet de fin de formation OpenClassrooms : Création d'un réseau social d'entreprise où les utilisateurs pouvaient échanger des messages et des images sur un fil d'actualité commun. Un rôle d'administrateur pouvait être attribué pour la modération des posts et des utilisateurs. Ce projet étant "From scratch", c'est-à-dire qu'il a nécéssité les création de la base de donnée avec Sequelize, de l'API avec Express et Node.js, et de l'interface utilisateur avec React.js.`,
+            mainTechnos: ['React', 'NodeJS', 'Sequelize', 'Sass'],
+            allTechnos: ['React', 'NodeJS', 'Sequelize', 'Sass']
+        },
+        {
+            putFirst: false,
+            name: 'PopCorn Games (bientôt)',
+            logoSrc: './android-chrome-512x512.png',
+            github: '',
+            link: '',
+            text: `J'ai réalisé un jeu multijoueurs en ligne qui reprend le jeu icônique Picass de l'émission POPCORN sur twitch (qui sera bientôt disponible je l'espères).
+        Les règles du jeu : chacun son tour, l'un des joueur doit faire deviner une expression française en dessinnant, plus les autres joueurs devinent tôt et plus ils ont de points !`,
+            mainTechnos: ['React', 'Tailwind'],
+            allTechnos: ['React', 'Tailwind']
+        }
+    ]
+
+    const projectsSite = [
+        {
+            putFirst: true,
+            name: `Agatha Festival`,
+            logoSrc: './têteDragon.webp',
+            capture: './agatha capture (1).webp',
+            github: 'https://github.com/jeanchok/Agatha-Site',
+            link: 'https://www.agathafestival.fr/',
+            text: `Réalisation d'un site pour un festival. J'ai tout réaliser : du design à la configuration de l'API avec Strapi en passant évidemment par le frontend.
+            Le plus gros challenge de ce projet était de prévoir la mise en page qui changeait au fur et à mesure de l'annonce des artistes et des différentes informations.`,
+            mainTechnos: ['React', 'ViteJS', 'Sass'],
+            allTechnos: ['React', 'ViteJS', 'Sass', 'HTML5']
+        },
+        {
+            putFirst: false,
+            name: `Le Camion à Pizzas`,
+            logoSrc: './camion.png',
+            github: '',
+            link: 'https://www.lecamionapizzas.com/',
+            text: `Réalisation d'un site vitrine pour un Camion à Pizzas. Le principal travail réalisé était la refonte totale du design. Le SEO devait être également pris en compte. Il est effectivement classé n°1 sur le terme "Camion à Pizzas".`,
+            mainTechnos: ['JS', 'Wix'],
+            allTechnos: ['JS', 'Wix', 'HTML5', 'CSS3']
+        },
+        {
+            putFirst: false,
+            name: `Agence Webzh`,
+            logoSrc: './logo webzh white.png',
+            github: 'https://github.com/jeanchok/webagence',
+            link: 'https://www.webzh.site/',
+            text: `Réalisation d'un site vitrine pour l'agence web crée par ma soeur et moi. J'ai fais le choix de Next.js pour développer ce projet, pour optimiser le SEO du site web (Grâce au "serveur side rendering"). J'ai également fais le choix de Tailwind CSS pour réduite le temps de développement.`,
+            mainTechnos: ['React', 'NextJS', 'Tailwind'],
+            allTechnos: ['React', 'NextJS', 'Tailwind', 'HTML5']
+        }
+    ]
+
+    if (modalActive) {
+        document.body.classList.add('active-modal')
+    } else {
+        document.body.classList.remove('active-modal')
+    }
+
+    // <button onClick={() => { setModalActive(!modalActive); setPropsModal(actus.attributes) }} className="btn-modal" >LIRE +</button>
 
 
     useEffect(() => {
@@ -28,11 +101,37 @@ const Portfolio = () => {
             <div className='portfolioContainer'>
                 <h2 className={isLoading2 ? 'portfolioTitle tracking-in-contract-bck' : 'portfolioTitle linear-wipe'}>Projets</h2>
                 <p className='tracking-in-expand-fwd-top'>Découvrez mes projets réalisés en tant que développeur web.</p>
-
-
-
                 <div className='cardContainer'>
-                    <div className={projectActive1 ? 'showProject' : 'hideProject'}>
+                    <div className='cardContainer__side'>
+                        <div>
+                            <h3 className='cardContainer__side--title'>
+                                Sites Web
+                            </h3>
+                        </div>
+
+                        {projectsSite.filter(project => project.putFirst === true).map((projectFirst, index) => (
+                            <ProjectCardL key={index} project={projectFirst} />
+                        ))}
+                        {projectsSite.filter(project => project.putFirst === false).map((projectSmall, index) => (
+                            <ProjectCardS key={index} project={projectSmall} />
+                        ))}
+
+                    </div>
+                    <div className='cardContainer__side'>
+                        <div>
+                            <h3 className='cardContainer__side--title'>
+                                Applications Web
+                            </h3>
+                        </div>
+                        {projectsApp.filter(project => project.putFirst === true).map((projectFirst, index) => (
+                            <ProjectCardL key={index} project={projectFirst} />
+                        ))}
+                        {projectsApp.filter(project => project.putFirst === false).map((projectSmall, index) => (
+                            <ProjectCardS key={index} project={projectSmall} />
+                        ))}
+
+                    </div>
+                    {/* <div className={projectActive1 ? 'showProject' : 'hideProject'}>
                         <div className='portfolio__TitleContainer'>
                             <img className='portfolio__ImgTitle' src="./logo-openclassroom.jpg" alt="openclassrooms logo" />
                             <h3>Réseau social d'entreprise</h3>
@@ -61,35 +160,6 @@ const Portfolio = () => {
                             <img src="./arrow.png" alt="back" />
                         </button>
                     </div>
-
-
-                    {/* <div className={projectActive2 ? 'showProject' : 'hideProject'}>
-                        <div className='portfolio__TitleContainer'>
-                            <img className='portfolio__ImgTitle' src="./logotrans.png" alt="d2m logo" />
-                            <h3>Site vitrine pour un professionnel</h3>
-                        </div>
-                        <div className='portfolio__technoSection'>
-                            <h4>Technologies utilisées</h4>
-                            <div className='portfolio__technoContainer'>
-
-                                <img className='portfolio__technoImg' src="./icons8-css3-48.png" alt="css3" />
-                                <img className='portfolio__technoImg' src="./icons8-html-5-48.png" alt="html5" />
-                                <img className='portfolio__technoImg' src="./Wordpress_Blue_logo.png" alt="Wordpress" />
-
-                            </div>
-                        </div>
-                        <div className='portfolio__TextContainer'>
-                            <h4>Étude de cas</h4>
-                            <p>Réalisation d'un site vitrine pour un revendeur de machine à bois. J'ai dû m'adapter à son budget
-                                en modifiant un thème gratuit pour satisfaire les besoins de son entreprise locale.
-                            </p>
-                            <a href="https://d2m-machine-bois.fr/">Voir le projet</a>
-                        </div>
-                        <button onClick={() => setProjectActive2(!projectActive2)} className='portfolio__backButton'>
-                            <img src="./arrow.png" alt="back" />
-                        </button>
-                    </div> */}
-
                     <div className={projectActive2 ? 'showProject' : 'hideProject'}>
                         <div className='portfolio__TitleContainer'>
                             <img className='portfolio__ImgTitle' src="./camion.png" alt="cap logo" />
@@ -176,50 +246,9 @@ const Portfolio = () => {
                             <button className='cardOver__button' onClick={() => setProjectActive3(!projectActive3)}><img className='cardOver__buttonImg' src=".\external-link (1).png" alt="carré flêche" /></button>
                         </div>
                         <img className='portfolioImage' src="./webzh mockup.PNG" alt="logo webzh agence" />
-                    </div>
+                    </div> */}
 
                 </div>
-
-
-
-                {/* <div className='portfolio text-focus-in'>
-                    <div className='flip-card'>
-                        <div className='flip-card-inner'>
-                            <div className='flip-card-front OC'>
-                                <img src="./logo-openclassroom.jpg" alt="logo-openclassroom" />
-                            </div>
-                            <div className='flip-card-back OCback'>
-                                <img src="./icon-above-font.png" alt="logo-groupomania" />
-                                <h4>Réseau social d'entreprise :</h4>
-                                <p>Création de compte, posts, likes, gestion des utilisateurs...</p>
-                                <a href='' target='_blank' rel="noopener noreferrer">Voir le site</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='flip-card'>
-                        <div className='flip-card-inner'>
-                            <div className='flip-card-front'>
-                                <h4>Projets Professionnels</h4>
-
-                            </div>
-                            <div className='flip-card-back'>
-                                <img src="./logotrans.png" alt="logo-projet-professionnel" />
-                                <a href='https://d2m-machine-bois.fr/' target='_blank' rel="noopener noreferrer">
-                                    <h4>Visiter le site</h4></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='flip-card'>
-                        <div className='flip-card-inner'>
-                            <div className='flip-card-front'>
-                                <h4>Mes Projets</h4>
-                            </div>
-                            <div className='flip-card-back'>
-                                <h4>En cours ...</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div> */}
             </div >
             <Particules />
             <Footer />

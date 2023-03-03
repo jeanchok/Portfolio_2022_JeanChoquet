@@ -34,7 +34,7 @@ const Competences = () => {
                         <div className='competencesContainer__competences__cards--front puff-in-center1'>
                             <h4>Frontend</h4>
                             <h5>Langages</h5>
-                            <p>HTML, CSS, Sass, Scss, Javascript, React</p>
+                            <p>HTML, CSS, Sass, Tailwind, Javascript, React</p>
                             <h5>Outils</h5>
                             <p>Github, VSCode, Terminal</p>
                         </div>

@@ -10,8 +10,10 @@ const Navigation = () => {
 
     return (
         <div className="navigation">
-            <button className="mobileMenu" onClick={changeClass} aria-label="Navigation">
-                {menuClass ? <i className="fas fa-times"></i> : <i className="fa fa-bars" aria-hidden="true"></i>}
+            <button className={!menuClass ? "mobileMenu container" : "mobileMenu container change"} onClick={changeClass} aria-label="Open Navigation">
+                <div className="bar1"></div>
+                <div className="bar2"></div>
+                <div className="bar3"></div>
             </button>
             <ul className={menuClass ? 'snip1198 active' : 'snip1198'} >
                 <NavLink
