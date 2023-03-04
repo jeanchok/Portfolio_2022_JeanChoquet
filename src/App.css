@@ -675,6 +675,7 @@ footer {
   justify-content: space-between;
   margin-top: 20px;
   gap: 50px;
+  margin-bottom: 20px;
 }
 
 .cardContainer__side {
@@ -859,7 +860,6 @@ footer {
 .portfolio__technoContainer {
   display: flex;
   justify-content: space-between;
-  width: 50%;
   gap: 14px;
 }
 
@@ -1311,6 +1311,7 @@ a {
   width: 100%;
   position: relative;
   z-index: 10;
+  margin-top: 60px;
 }
 
 #contact-form {
@@ -1508,7 +1509,7 @@ a {
   }
 
   .cardContainer__side {
-    width: 80%;
+    width: 75%;
   }
 
 }
@@ -1600,7 +1601,6 @@ a {
   }
 
   .accueilContainer {
-    margin-top: 20px;
     margin-bottom: 20px;
   }
 
