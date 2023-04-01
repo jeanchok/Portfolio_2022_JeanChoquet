@@ -400,6 +400,12 @@ footer {
   margin: 15px;
 }
 
+.portfolioContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .ProjectCardL {
   min-height: 300px;
   width: 100%;
@@ -1124,12 +1130,13 @@ footer {
 
 .competencesContainer {
   max-width: 1280px;
-  margin: auto;
   display: flex;
   flex-direction: column;
   position: relative;
   z-index: 10;
   margin-top: 60px;
+  justify-content: center;
+  height: 100%;
 }
 
 .competencesContainer__textHeader p {
