@@ -1307,11 +1307,16 @@ a {
 /*Contact */
 .contactContainer {
   max-width: 1280px;
-  margin: auto;
   width: 100%;
   position: relative;
   z-index: 10;
   margin-top: 60px;
+  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
 }
 
 #contact-form {
@@ -1424,7 +1429,6 @@ a {
   margin-top: 20px;
   margin-bottom: 20px;
   justify-content: space-between;
-  margin: auto;
   margin-top: 50px;
 }
 
@@ -1433,7 +1437,6 @@ a {
 }
 
 .textContact {
-  margin: auto;
   margin-top: 20px;
 }
 
@@ -1659,11 +1662,6 @@ a {
   }
 
   .competencesContainer {
-    width: 100%;
-  }
-
-  .contactContainer {
-    margin-bottom: 20px;
     width: 100%;
   }
 
