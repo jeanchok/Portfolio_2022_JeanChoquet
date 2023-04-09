@@ -16,7 +16,7 @@ const ProjectCardS = ({ project }) => {
     return (
         <>{
             project ?
-                <div className='ProjectCardS puff-in-center2'>
+                <div className={'ProjectCardS puff-in-center' + project.id}>
                     <div className='ProjectCardS__Text'>
                         <h3 className='ProjectCardS__Title'>{project.name}</h3>
                         <div className='ProjectCardL__Techno'>

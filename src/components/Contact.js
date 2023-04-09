@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import emailjs from '@emailjs/browser';
@@ -11,6 +11,14 @@ const Contact = () => {
     const [name, setName] = useState('');
     const [subject, setSubject] = useState('');
     const [messageBody, setMessageBody] = useState('');
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setIsLoading(false);
+        }, 1500);
+        return () => clearTimeout(timer);
+    }, []);
 
     const form = useRef();
 
@@ -37,7 +45,7 @@ const Contact = () => {
             </header>
             <div className='contactContainer'>
                 <div className='contact'>
-                    <h2 className='portfolioTitle linear-wipe'>Contact</h2>
+                    <h2 className={isLoading ? 'portfolioTitle tracking-in-contract-bck' : 'portfolioTitle linear-wipe'}>Contact</h2>
                 </div>
                 <p className='textContact tracking-in-expand-fwd-top'>Pour toutes informations, vous pouvez me contacter avec le formulaire ci-desous.</p>
                 <div className='contactFormContainer'>

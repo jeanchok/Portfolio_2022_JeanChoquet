@@ -67,6 +67,7 @@ header {
   flex-direction: row;
   background-color: #363636;
   z-index: 100;
+
 }
 
 footer {
@@ -1253,9 +1254,21 @@ a {
 }
 
 .puff-in-center3 {
-  -webkit-animation: puff-in-center 1.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
-  animation: puff-in-center 1.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+  -webkit-animation: puff-in-center 1.2s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+  animation: puff-in-center 1.2s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
 }
+
+.puff-in-center4 {
+  -webkit-animation: puff-in-center 1.4s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+  animation: puff-in-center 1.4s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+}
+
+
+.puff-in-center5 {
+  -webkit-animation: puff-in-center 1.6s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+  animation: puff-in-center 1.6s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+}
+
 
 @-webkit-keyframes puff-in-center {
   0% {
@@ -1541,6 +1554,16 @@ a {
     width: 100%;
     position: relative;
     min-height: 60px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .opended {
+    height: 100vh;
+    opacity: 0;
+    -webkit-animation: opacityUp 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: opacityUp 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   }
 
   .navigation ul {
@@ -1581,6 +1604,19 @@ a {
 
   .active {
     display: flex !important;
+    -webkit-animation: opacityUp 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: opacityUp 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+  }
+
+  @keyframes opacityUp {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
   }
 
   .mobileMenu {
@@ -1598,6 +1634,8 @@ a {
     margin-left: 10px;
     position: absolute;
     right: 20px;
+    position: absolute;
+    top: 0;
   }
 }
 
@@ -1671,6 +1709,7 @@ a {
 
   .competencesContainer {
     width: 100%;
+    height: auto;
   }
 
   .contact h2 {

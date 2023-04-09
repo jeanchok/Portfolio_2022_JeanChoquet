@@ -26,9 +26,9 @@ const Accueil = () => {
 
     return (
         <div className="main">
-            <header>
-                <Navigation />
-            </header>
+
+            <Navigation />
+
             <div className='accueilContainer'>
                 <div className='accueil'>
                     <div className='profilePictureContainer'>

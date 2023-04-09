@@ -26,7 +26,7 @@ const ProjectCardL = ({ project }) => {
         <>
             {
                 project ?
-                    <div className='ProjectCardL puff-in-center1'>
+                    <div className={'ProjectCardL puff-in-center' + project.id}>
                         <div className='ProjectCardL__Capture' style={{ backgroundImage: `url("${project.capture}")`, height: '50%' }}>
                             <div className='ProjectCardL__Head'>
                                 <div className='ProjectCardL__Head--logo'>
