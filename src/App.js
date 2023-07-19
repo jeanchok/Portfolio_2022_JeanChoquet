@@ -6,7 +6,6 @@ import Competences from './components/Competences';
 import Contact from './components/Contact';
 import Accueil from './page/Accueil';
 
-
 const App = () => {
   return (
     <BrowserRouter>

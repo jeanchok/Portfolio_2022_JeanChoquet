@@ -22,12 +22,13 @@ const ProjectCardL = ({ project }) => {
         document.body.classList.remove('active-modal')
     }
 
+    console.log(project)
     return (
         <>
             {
                 project ?
                     <div className={'ProjectCardL puff-in-center' + project.id}>
-                        <div className='ProjectCardL__Capture' style={{ backgroundImage: `url("${project.capture}")`, height: '50%' }}>
+                        <div className='ProjectCardL__Capture' style={{ backgroundImage: `url("${project.capture}")`, height: '50%', backgroundSize: 'cover' }}>
                             <div className='ProjectCardL__Head'>
                                 <div className='ProjectCardL__Head--logo'>
                                     <img src={project.logoSrc} alt={project.name} />
@@ -36,7 +37,7 @@ const ProjectCardL = ({ project }) => {
                                     <div className='ProjectCardL__Head--LinksGit'>
                                         {project.github !== '' ?
                                             <a href={project.github}>
-                                                <a href={project.link} target="_blank"><img src="github-fill.png" alt={`${project.name} + git link`} />
+                                                <a href={project.github} target="_blank"><img src="github-fill.png" alt={`${project.name} + git link`} />
                                                 </a>
                                             </a>
                                             : null}

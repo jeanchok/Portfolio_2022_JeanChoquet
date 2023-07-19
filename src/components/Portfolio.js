@@ -20,7 +20,7 @@ const Portfolio = () => {
 
     const projectsApp = [
         {
-            putFirst: true,
+            putFirst: false,
             name: `Réseau social d'entreprise`,
             logoSrc: './logo-openclassroom.jpg',
             github: 'https://github.com/jeanchok/Projet_7_Groupomania_Choquet_Jean',
@@ -31,11 +31,12 @@ const Portfolio = () => {
             id: 2
         },
         {
-            putFirst: false,
-            name: 'PopCorn Games (bientôt)',
+            putFirst: true,
+            name: 'PopCorn Games (Non-officiel)',
             logoSrc: './android-chrome-512x512.png',
-            github: '',
-            link: '',
+            capture: './popcornScreen.webp',
+            github: 'https://github.com/jeanchok/popcorngame',
+            link: 'https://popcornfront.jeanchoquet.fr/',
             text: `J'ai réalisé un jeu multijoueurs en ligne qui reprend le jeu icônique Picass de l'émission POPCORN sur twitch (qui sera bientôt disponible je l'espères).
         Les règles du jeu : chacun son tour, l'un des joueur doit faire deviner une expression française en dessinnant, plus les autres joueurs devinent tôt et plus ils ont de points !`,
             mainTechnos: ['React', 'Tailwind'],
@@ -50,7 +51,7 @@ const Portfolio = () => {
             name: `Agatha Festival`,
             logoSrc: './têteDragon.webp',
             capture: './agatha capture (1).webp',
-            github: 'https://github.com/jeanchok/Agatha-Site',
+            github: '',
             link: 'https://www.agathafestival.fr/',
             text: `Réalisation d'un site pour un festival. J'ai tout réaliser : du design à la configuration de l'API avec Strapi en passant évidemment par le frontend.
             Le plus gros challenge de ce projet était de prévoir la mise en page qui changeait au fur et à mesure de l'annonce des artistes et des différentes informations.`,

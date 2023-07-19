@@ -25,28 +25,31 @@ const Accueil = () => {
     }, []);
 
     return (
-        <div className="main">
-
+        <>
             <Navigation />
+            <div className="main">
 
-            <div className='accueilContainer'>
-                <div className='accueil'>
-                    <div className='profilePictureContainer'>
-                        <img className='profilePicture text-focus-in' src='./1651058775675.webp' alt='Jean Choquet Photo de profile'></img>
-                    </div>
-                    <div className='accueil__text'>
-                        <h1 className={isLoading ?
-                            'hidden' :
-                            isLoading2 ? 'tracking-in-contract-bck' : 'linear-wipe'}>
-                            Jean Choquet</h1>
-                        <h2 className={isLoading ? 'hidden' : 'tracking-in-expand-fwd-top'}>Développeur Web</h2>
-                        <h3 className={isLoading ? 'hidden' : 'text-focus-in'}>Code avec passion, pour que vos projets voient le jour.</h3>
+
+
+                <div className='accueilContainer'>
+                    <div className='accueil'>
+                        <div className='profilePictureContainer'>
+                            <img className='profilePicture text-focus-in' src='./1651058775675.webp' alt='Jean Choquet Photo de profile'></img>
+                        </div>
+                        <div className='accueil__text'>
+                            <h1 className={isLoading ?
+                                'hidden' :
+                                isLoading2 ? 'tracking-in-contract-bck' : 'linear-wipe'}>
+                                Jean Choquet</h1>
+                            <h2 className={isLoading ? 'hidden' : 'tracking-in-expand-fwd-top'}>Développeur Web</h2>
+                            <h3 className={isLoading ? 'hidden' : 'text-focus-in'}>Code avec passion, pour que vos projets voient le jour.</h3>
+                        </div>
                     </div>
                 </div>
+                <Footer />
+                <Particules />
             </div>
-            <Footer />
-            <Particules />
-        </div>
+        </>
     );
 };
 
