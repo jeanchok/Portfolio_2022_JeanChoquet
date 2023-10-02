@@ -2,6 +2,7 @@ html,
 body,
 #root {
   height: 100%;
+  overflow: hidden;
 }
 
 .App {
@@ -69,7 +70,7 @@ header {
   flex-direction: row;
   background-color: #363636;
   z-index: 100;
-
+  left: 0;
 }
 
 footer {
@@ -142,7 +143,7 @@ footer {
   max-width: 1280px;
   height: 100%;
   z-index: 10;
-  margin-top: 60px;
+  margin-top: 72px;
 }
 
 .accueilContainer h1 {
@@ -407,6 +408,7 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: auto;
 }
 
 .ProjectCardL {
@@ -443,7 +445,7 @@ footer {
   height: 100%;
   flex-direction: column;
   display: flex;
-  gap: 12px;
+  gap: 14px;
 }
 
 .ProjectCardL__More--btn {
@@ -508,10 +510,11 @@ footer {
 }
 
 .ProjectCardL__Techno {
+  overflow-y: auto;
   height: 50%;
   display: flex;
   align-items: end;
-  gap: 8px;
+  gap: 12px;
 }
 
 .ProjectCardL__Techno p {
@@ -715,6 +718,7 @@ footer {
 .ProjectCardS__Text {
   display: flex;
   flex-direction: column;
+  width: 90%;
   gap: 15px;
 }
 
@@ -722,9 +726,13 @@ footer {
   padding: 8px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .ProjectCardS__btn button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 50px;
   height: 50px;
   border-radius: 50px;
@@ -1140,7 +1148,7 @@ footer {
   flex-direction: column;
   position: relative;
   z-index: 10;
-  margin-top: 60px;
+  margin-top: 58px;
   justify-content: center;
   height: 100%;
 }
@@ -1505,8 +1513,12 @@ a {
 
   }
 
+  .portfolioContainer {
+    margin-top: 260px;
+  }
+
   footer {
-    margin-top: 150px;
+    margin-top: 220px;
 
   }
 }
@@ -1689,9 +1701,7 @@ a {
     margin-bottom: 20px;
   }
 
-  .portfolioContainer p {
-    margin: auto;
-  }
+  .portfolioContainer p {}
 
   @keyframes scale-in-center {
     0% {
@@ -1707,6 +1717,9 @@ a {
     }
   }
 
+  .ProjectCardS__Text {
+    width: 80%;
+  }
 
   .flip-card-inner {
     margin-left: -15px;

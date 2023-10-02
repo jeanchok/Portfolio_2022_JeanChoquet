@@ -38,7 +38,12 @@ const ProjectCardS = ({ project }) => {
                         </div>
                     </div>
                     <div className='ProjectCardS__btn'>
-                        <button onClick={() => setModalActive(true)}>+</button>
+                        <button onClick={() => setModalActive(true)}>
+                            <svg width={26} height={26} fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.75 12h16.5" />
+                                <path d="M12 3.75v16.5" />
+                            </svg>
+                        </button>
                     </div>
                 </div>
 

@@ -3,9 +3,6 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import Particules from '../components/Particules';
 
-
-
-
 const Accueil = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [isLoading2, setIsLoading2] = useState(true);
@@ -28,9 +25,6 @@ const Accueil = () => {
         <>
             <Navigation />
             <div className="main">
-
-
-
                 <div className='accueilContainer'>
                     <div className='accueil'>
                         <div className='profilePictureContainer'>

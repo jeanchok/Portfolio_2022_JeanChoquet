@@ -40,6 +40,23 @@ const Contact = () => {
 
     return (
         <div className="main">
+            <style global jsx>{`
+            html {
+                height: 100%!important;
+              }
+              #__next {
+                height: 100%!important;
+              }
+  @media (max-width: 1024px) {
+    html {
+      height: auto;
+    }
+    #__next {
+        height: auto;
+      }
+  }
+`}
+            </style>
             <header>
                 <Navigation />
             </header>
