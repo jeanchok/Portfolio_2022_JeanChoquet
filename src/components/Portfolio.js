@@ -25,7 +25,8 @@ const Portfolio = () => {
             logoSrc: './logo-openclassroom.jpg',
             github: 'https://github.com/jeanchok/Projet_7_Groupomania_Choquet_Jean',
             link: '',
-            text: `Projet de fin de formation OpenClassrooms : Création d'un réseau social d'entreprise où les utilisateurs pouvaient échanger des messages et des images sur un fil d'actualité commun. Un rôle d'administrateur pouvait être attribué pour la modération des posts et des utilisateurs. Ce projet étant "From scratch", c'est-à-dire qu'il a nécéssité les création de la base de donnée avec Sequelize, de l'API avec Express et Node.js, et de l'interface utilisateur avec React.js.`,
+            text: `
+            Création d'un réseau social d'entreprise pour le projet de fin de formation OpenClassrooms. Développé "From scratch" avec Sequelize, Express et Node.js pour l'API, et React.js pour l'interface, il inclut aussi un rôle d'administrateur pour la modération.`,
             mainTechnos: ['React', 'NodeJS', 'Sequelize', 'Sass'],
             allTechnos: ['React', 'NodeJS', 'Sequelize', 'Sass'],
             id: 2

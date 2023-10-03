@@ -65,14 +65,17 @@ const ModalProjects = (props) => {
 
 
     const MODAL_STYLES = {
-        position: 'fixed',
+        position: "fixed",
         width: '100%',
         backgroundColor: 'rgba(0, 0, 0, 50%)',
         height: '100%',
         top: '0',
         left: '0',
         zIndex: "1000",
+        alignItems: "center",
+        justifyContent: "center"
     };
+
     const OVERLAY_STYLE = {
         position: "fixed",
         display: "flex",
@@ -97,7 +100,10 @@ const ModalProjects = (props) => {
                         <button className="close-modal"
                             onClick={() => { props.setModalActive(false); toggleModal() }}
                         >
-                            X
+                            <svg width={46} height={46} fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="m18.75 5.25-13.5 13.5" />
+                                <path d="M18.75 18.75 5.25 5.25" />
+                            </svg>
                         </button>
                         <div className='portfolio__TitleContainer'>
                             <img className='portfolio__ImgTitle' src={props.propsModal.logoSrc} alt="openclassrooms logo" />
@@ -107,7 +113,7 @@ const ModalProjects = (props) => {
                             <h4>Technologies utilisées</h4>
                             <div className='portfolio__technoContainer'>
                                 {props.propsModal.allTechnos.map((technos, index) => (
-                                    <img className='portfolio__technoImg' src={technosList.find(element => element.name === technos).imgSrc} alt={technosList.find(element => element.name === technos).name} />
+                                    <img key={index} className='portfolio__technoImg' src={technosList.find(element => element.name === technos).imgSrc} alt={technosList.find(element => element.name === technos).name} />
                                 ))}
                             </div>
                         </div>
