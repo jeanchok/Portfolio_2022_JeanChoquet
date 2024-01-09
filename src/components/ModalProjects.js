@@ -5,9 +5,7 @@ const ModalProjects = (props) => {
 
     const toggleModal = () => {
         setModal(!modal);
-        console.log(modal)
     };
-    console.log(props)
 
     if (modal) {
         document.body.classList.add('active-modal')
@@ -60,6 +58,14 @@ const ModalProjects = (props) => {
         {
             name: 'Sass',
             imgSrc: './sass.png'
+        },
+        {
+            name: 'Typescript',
+            imgSrc: './typescript.png'
+        },
+        {
+            name: 'Supabase',
+            imgSrc: './supabase.png'
         }
     ]
 

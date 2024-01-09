@@ -1282,6 +1282,11 @@ a {
   animation: puff-in-center 1.6s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
 }
 
+.puff-in-center6 {
+  -webkit-animation: puff-in-center 1.8s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+  animation: puff-in-center 1.8s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+}
+
 
 @-webkit-keyframes puff-in-center {
   0% {
@@ -1755,4 +1760,27 @@ a {
     width: 300px;
     height: 300px;
   }
+}
+
+/*Scroll Bar */
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+  max-height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #292929;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #363636;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

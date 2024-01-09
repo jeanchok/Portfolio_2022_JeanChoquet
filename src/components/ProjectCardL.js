@@ -22,7 +22,6 @@ const ProjectCardL = ({ project }) => {
         document.body.classList.remove('active-modal')
     }
 
-    console.log(project)
     return (
         <>
             {

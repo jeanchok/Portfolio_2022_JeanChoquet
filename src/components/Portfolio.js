@@ -29,11 +29,11 @@ const Portfolio = () => {
             Création d'un réseau social d'entreprise pour le projet de fin de formation OpenClassrooms. Développé "From scratch" avec Sequelize, Express et Node.js pour l'API, et React.js pour l'interface, il inclut aussi un rôle d'administrateur pour la modération.`,
             mainTechnos: ['React', 'NodeJS', 'Sequelize', 'Sass'],
             allTechnos: ['React', 'NodeJS', 'Sequelize', 'Sass'],
-            id: 2
+            id: 4
         },
         {
-            putFirst: true,
-            name: 'PopCorn Games (Non-officiel)',
+            putFirst: false,
+            name: 'PopCorn Games',
             logoSrc: './android-chrome-512x512.png',
             capture: './popcornScreen.webp',
             github: 'https://github.com/jeanchok/popcorngame',
@@ -42,9 +42,23 @@ const Portfolio = () => {
         Les règles du jeu : chacun son tour, l'un des joueur doit faire deviner une expression française en dessinnant, plus les autres joueurs devinent tôt et plus ils ont de points !`,
             mainTechnos: ['React', 'Tailwind'],
             allTechnos: ['React', 'Tailwind'],
-            id: 4
+            id: 6
+        },
+        {
+            putFirst: true,
+            name: 'Eurekia | Saas IA',
+            logoSrc: './128.png',
+            github: '',
+            capture: './screenshot_eurekia.webp',
+            link: 'https://eurekia.xyz/',
+            text: `Je créé une expérience utilisateur unique en fusionnant chat spécialisé, génération d'images AI, et texte-to-speech hyper réaliste, le plus grand défi étant d'assurer une intégration fluide et intuitive de ces outils diversifiés.`,
+            mainTechnos: ['NextJS', 'Tailwind', 'Supabase', 'Typescript'],
+            allTechnos: ['NextJS', 'Tailwind', 'Supabase', 'Typescript'],
+            id: 2
         }
     ]
+
+    
 
     const projectsSite = [
         {
