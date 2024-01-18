@@ -67,7 +67,7 @@ const Portfolio = () => {
             logoSrc: './têteDragon.webp',
             capture: './agatha capture (1).webp',
             github: '',
-            link: 'https://www.agathafestival.fr/',
+            link: '',
             text: `Réalisation d'un site pour un festival. J'ai tout réaliser : du design à la configuration de l'API avec Strapi en passant évidemment par le frontend.
             Le plus gros challenge de ce projet était de prévoir la mise en page qui changeait au fur et à mesure de l'annonce des artistes et des différentes informations.`,
             mainTechnos: ['React', 'ViteJS', 'Sass'],
